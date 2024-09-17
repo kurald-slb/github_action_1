@@ -9,7 +9,7 @@ jobs:
           - name: Checkout
             uses: actions/checkout@v4.1.7
             with:
-              path: 'release'
+              path: release
         
           - name: running multiple commands
             run: |
