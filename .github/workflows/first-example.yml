@@ -1,0 +1,21 @@
+name: My first workflow
+
+on: push
+
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+          - name: welcome message
+            run: echo "hello"
+
+          - name: list files
+            run: ls -lrat
+          
+          - name: network
+            run: netstat -an
+
+          - name: read file
+            run: cat README.md
+
+             
