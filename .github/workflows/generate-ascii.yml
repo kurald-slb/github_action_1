@@ -1,0 +1,25 @@
+name: generate ascii data
+
+on: push
+
+jobs: 
+    Ascii_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: checkout repo
+          uses: actions/checkout@v4.1.7
+
+        - name: install Cowsay program
+          run: sudo apt install cowsay -y
+
+        - name: execute cowsay command
+          run: cowsay -f dragon-and-cow "run I am a bull ...!" >> bull.txt
+
+        - name: Test file exits
+          run: grep -i "bull" bull.txt
+          
+        - name: Read File
+          run: cat bull.txt
+
+        - name: checkout repo files
+          run: ls -lrta
