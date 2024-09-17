@@ -8,17 +8,18 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v4.1.7
+            with:
+              path: 'release'
         
-          - name: welcome message
-            run: echo "hello"
+          - name: running multiple commands
+            run: |
+                echo "hello"
+                ls -lrta
+                cat README.md
 
-          - name: list files
-            run: ls -lrat
+          - name: Generate ASCII artwork
+            run: cowsay -f bull "Run for cover, I am a Bull..." >> bull.txt
           
-          - name: network
-            run: netstat -an
 
-          - name: read file
-            run: cat README.md
 
              
