@@ -8,8 +8,6 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v4.1.7
-            with:
-              path: release
         
           - name: running multiple commands
             run: |
