@@ -6,6 +6,9 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
+          - name: Checkout
+            uses: actions/checkout@v4.1.7
+        
           - name: welcome message
             run: echo "hello"
 
