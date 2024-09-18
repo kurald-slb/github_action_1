@@ -1,0 +1,20 @@
+name: run-shell-script
+
+on: push
+
+jobs:
+    run-shell-script:
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: checkout
+            uses: actions/checkout@v4.1.7
+
+          - name: List files
+            run: ls -lrta
+
+          - name: run-shell-script
+            run: ./ascii_script.sh
+
+
+
