@@ -32,7 +32,7 @@ jobs:
             name: dragon-text-file
         
         - name: Test File Exist
-          run: grep -i "dragon" dragon.txt
+          run: grep -i "ack" dragon.txt
 
 
     
